@@ -1,15 +1,15 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-#include "heap.h"
+#include "some_heap.h"
 
 /*
 Assignment 5: integer minheap
 */
 
-unsigned long long rand_between(unsigned long long min,
-                                unsigned long long max) {
+unsigned long long rand_between(unsigned long long min, unsigned long long max) {
     unsigned long long range = max - min;
     return min + (rand() % range);
 }
@@ -26,10 +26,10 @@ void test_heap(void) {
         printf("Removed %llu\n", key);
         heap_print(heap);
     }
-    exit(0);
+    heap_free(heap);
 }
+
 int main(int argc, char *argv[]) {
     srand(time(NULL));
-
     test_heap();
 }

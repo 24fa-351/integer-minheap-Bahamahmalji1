@@ -31,4 +31,9 @@ heap_value_t heap_remove_min(heap_t *heap);
 
 void heap_print(heap_t *heap);
 
+unsigned int heap_parent(unsigned int index);
+unsigned int heap_left_child(unsigned int index);
+unsigned int heap_right_child(unsigned int index);
+unsigned int heap_level(unsigned int index);
+
 #endif
